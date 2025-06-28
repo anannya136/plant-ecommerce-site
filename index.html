@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gach_pala</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-navbar">
+        <div class="top-icons"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-instagram"></i></div>
+        <div class="other-links">
+            <span class="logged-out-view"><a href="#login" class="btn-custom">Login</a><a href="#signup" class="btn-custom">Sign up</a></span>
+            <span class="logged-in-view" style="display: none;"><a href="#profile" class="btn-custom">Profile</a><button id="btn-logout" class="btn-custom btn-logout">Logout</button></span>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home"><img src="images/Gach_pala3.png" alt="Gach Pala Logo" width="180px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><span><i class="fa-solid fa-bars" style="color: white;"></i></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Category</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#indoor">Indoor Plants</a></li>
+                            <li><a class="dropdown-item" href="#outdoor">Outdoor Plants</a></li>
+                            <li><a class="dropdown-item" href="#tools">Garden Tools</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div id="home" class="page-content">
+            <div class="home-section">
+                <section class="home">
+                    <div class="content">
+                        <h3>Biggest Plant Sale<br><span>Up To 30% Off</span></h3>
+                        <p>Grab your favourite plants first</p>
+                        <a href="#indoor" class="btn-custom btn-shop-now">Shop Now</a>
+                    </div>
+                    <div class="img"><img src="images/home.jpg" alt="Plant Sale" class="img-fluid"></div>
+                </section>
+            </div>
+            <div class="container py-5">
+                <h1 class="text-center">FEATURED PRODUCTS</h1>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-4">
+                    <div class="col"><div class="card h-100"><img src="images/Hibiscus.jpg" class="card-img-top" alt="Hibiscus"><div class="card-body d-flex flex-column"><h3>Hibiscus Plant</h3><h5>Tk.400 <strike>Tk.550</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="hibiscus" data-name="Hibiscus Plant" data-price="400">Add to Cart</button></div></div></div>
+                    <div class="col"><div class="card h-100"><img src="images/Money-Plant.jpg" class="card-img-top" alt="Money Plant"><div class="card-body d-flex flex-column"><h3>Money Plant</h3><h5>Tk.250 <strike>Tk.320</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="moneyplant" data-name="Money Plant" data-price="250">Add to Cart</button></div></div></div>
+                    <div class="col"><div class="card h-100"><img src="images/tool_set.jpg" class="card-img-top" alt="Tool Set"><div class="card-body d-flex flex-column"><h3>Mini Tool Set</h3><h5>Tk.150 <strike>Tk.350</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="toolset" data-name="Mini Tool Set" data-price="150">Add to Cart</button></div></div></div>
+                    <div class="col"><div class="card h-100"><img src="images/snake-plant.jpeg" class="card-img-top" alt="Snake Plant"><div class="card-body d-flex flex-column"><h3>Snake Plant</h3><h5>Tk.300 <strike>Tk.400</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="snakeplant" data-name="Snake Plant" data-price="300">Add to Cart</button></div></div></div>
+                </div>
+            </div>
+            <div class="banner banner-promo">
+                <div class="content"><h1>Get Up To 50% Off</h1><p>On selected garden tools and accessories.</p></div>
+            </div>
+        </div>
+
+        <div id="login" class="page-content"><div class="container login my-5"><div class="row"><div class="col-md-4" id="side1"><h3>Welcome Back!</h3><p>Log in to see your profile and saved cart.</p></div><div class="col-md-8" id="side2"><form id="login-form"><h3 class="mb-4">Login</h3><div id="login-message" class="mb-3"></div><div class="inp"><input type="email" name="email" placeholder="Email" required><input type="password" name="password" placeholder="Password" required></div><div><button type="submit" class="btn-custom">LOGIN</button></div><p class="mt-3">Don't have an account? <a href="#signup">Sign up here</a></p></form></div></div></div></div>
+        <div id="signup" class="page-content"><div class="container login my-5"><div class="row"><div class="col-md-4" id="side1"><h3>Create Your Account</h3></div><div class="col-md-8" id="side2"><form id="signup-form"><h3 class="mb-4">Sign Up</h3><div id="form-message" class="mb-3"></div><div class="inp"><input type="text" name="name" placeholder="Name" required><input type="email" name="email" placeholder="Email" required><input type="password" name="password" placeholder="Password" required></div><div><button type="submit" class="btn-custom">SIGN UP</button></div><p class="mt-3">Already have an account? <a href="#login">Login here</a></p></form></div></div></div></div>
+        <div id="profile" class="page-content"><div class="container my-5"><h2 id="profile-welcome">Welcome!</h2><p>Here is a summary of your past orders.</p><h4 class="mt-4">Order History</h4><div class="table-responsive"><table class="table table-striped table-bordered" id="order-history-table"><thead><tr><th>Order ID</th><th>Date</th><th>Product</th><th>Quantity</th><th>Price</th></tr></thead><tbody><tr><td colspan="5">You have no past orders.</td></tr></tbody></table></div></div></div>
+        <div id="about" class="page-content"><div class="container my-5"><h1 class="text-center">ABOUT US</h1><div class="row mt-4 align-items-center"><div class="col-md-6"><img src="images/about2.jpeg" class="img-fluid rounded" alt="About Us"></div><div class="col-md-6"><p>Welcome to Gach_pala, where nature and innovation converge in harmony. We're guardians of the environment, committed to sustainable practices and eco-conscious living. Join us on our journey to create a more beautiful, sustainable world.</p></div></div></div></div>
+        
+        <div id="indoor" class="page-content"><div class="banner banner-indoor"><div class="content"><h1>Indoor Plants</h1><p>To improve the air quality of your home</p></div></div><div class="container py-5"><div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"><div class="col"><div class="card h-100"><img src="images/Money-Plant.jpg" class="card-img-top" alt="Money Plant"><div class="card-body d-flex flex-column"><h3>Money Plant</h3><h5>Tk.250 <strike>Tk.320</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="moneyplant" data-name="Money Plant" data-price="250">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/coin_plant.jpg" class="card-img-top" alt="Coin Plant"><div class="card-body d-flex flex-column"><h3>Coin Plant</h3><h5>Tk.100 <strike>Tk.150</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="coinplant" data-name="Coin Plant" data-price="100">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/ZZ plant.jpg" class="card-img-top" alt="ZZ Plant"><div class="card-body d-flex flex-column"><h3>ZZ Plant</h3><h5>Tk.400 <strike>Tk.600</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="zzplant" data-name="ZZ Plant" data-price="400">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/snake-plant.jpeg" class="card-img-top" alt="Snake Plant"><div class="card-body d-flex flex-column"><h3>Snake Plant</h3><h5>Tk.300 <strike>Tk.400</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="snakeplant" data-name="Snake Plant" data-price="300">Add to Cart</button></div></div></div></div></div></div>
+        <div id="outdoor" class="page-content"><div class="banner banner-outdoor"><div class="content"><h1>Outdoor Plants</h1><p>To decor your beautiful garden</p></div></div><div class="container py-5"><div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"><div class="col"><div class="card h-100"><img src="images/Hibiscus.jpg" class="card-img-top" alt="Hibiscus"><div class="card-body d-flex flex-column"><h3>Hibiscus plant</h3><h5>Tk.400 <strike>Tk.550</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="hibiscus" data-name="Hibiscus Plant" data-price="400">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/jasmine.jpg" class="card-img-top" alt="Jasmine"><div class="card-body d-flex flex-column"><h3>Jasmine plant</h3><h5>Tk.300<strike>Tk.350</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="jasmine" data-name="Jasmine Plant" data-price="300">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/portulaca.jpg" class="card-img-top" alt="Portulaca"><div class="card-body d-flex flex-column"><h3>Portulaca plant</h3><h5>Tk.100 <strike>Tk.200</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="portulaca" data-name="Portulaca Plant" data-price="100">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/Oporajita.jpg" class="card-img-top" alt="Aparajita"><div class="card-body d-flex flex-column"><h3>Aparajita plant</h3><h5>Tk.100 <strike>Tk.170</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="aparajita" data-name="Aparajita Plant" data-price="100">Add to Cart</button></div></div></div></div><div class="container py-5 text-center"><h2 class="mb-3">About Outdoor Plants</h2><p>Step into the world of our outdoor plants, where beauty meets durability. Our plants are like nature's superheroes, with vibrant colors and strong leaves that can handle anything. They love being outside, soaking up the sun and dancing in the breeze.</p></div></div></div>
+        <div id="tools" class="page-content"><div class="banner banner-tools"><div class="content"><h1>Garden Tools</h1><p>To make your gardening more manageable</p></div></div><div class="container py-5"><div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"><div class="col"><div class="card h-100"><img src="images/water_jar.jpeg" class="card-img-top" alt="Water Jar"><div class="card-body d-flex flex-column"><h3>Water Jar</h3><h5>Tk.250 <strike> Tk.300</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="waterjar" data-name="Water Jar" data-price="250">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/tool_set.jpg" class="card-img-top" alt="Tool Set"><div class="card-body d-flex flex-column"><h3>Mini Tool Set</h3><h5>Tk.150 <strike>Tk.350</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="toolset" data-name="Mini Tool Set" data-price="150">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/pruner.jpg" class="card-img-top" alt="Pruner"><div class="card-body d-flex flex-column"><h3>Pruner</h3><h5>Tk.200 <strike>Tk.250</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="pruner" data-name="Pruner" data-price="200">Add to Cart</button></div></div></div><div class="col"><div class="card h-100"><img src="images/gloves.jpeg" class="card-img-top" alt="Gloves"><div class="card-body d-flex flex-column"><h3>Gardening Gloves</h3><h5>Tk.150 <strike>Tk.200</strike></h5><button class="btn-custom add-to-cart-btn mt-auto" data-id="gloves" data-name="Gardening Gloves" data-price="150">Add to Cart</button></div></div></div></div></div></div>
+        <div id="blog" class="page-content"><div class="banner banner-blog"><div class="content"><h1>Blogs</h1><p>Hey! I'm here to help you</p></div></div><div class="container py-5"><h2 class="text-center">Our Latest Blogs</h2><div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4"><div class="col"><div class="card blog-card h-100"><img src="images/blog1.jpg" class="card-img-top" alt=""><div class="card-body"><h3 class="card-title">How to make your houseplant happy</h3><p class="card-text">A healthy houseplant has the right combination of light, soil, and moisture.</p><a href="#blog-post-1" class="stretched-link"></a></div></div></div><div class="col"><div class="card blog-card h-100"><img src="images/blog2.jpg" class="card-img-top" alt=""><div class="card-body"><h3 class="card-title">Low maintenance houseplant</h3><p class="card-text">SPRUCE UP YOUR HOME WITH LOW MAINTENANCE HOUSEPLANTS.</p><a href="#blog-post-2" class="stretched-link"></a></div></div></div><div class="col"><div class="card blog-card h-100"><img src="images/blog3.jpg" class="card-img-top" alt=""><div class="card-body"><h3 class="card-title">How to Get Rid of Woolly Aphids</h3><p class="card-text">The appearance of white cottony fluff on a plant can be a worrying sight.</p><a href="#blog-post-3" class="stretched-link"></a></div></div></div></div></div></div>
+        <div id="blog-post-1" class="page-content"><div class="container my-5"><div class="row"><div class="col-lg-8 offset-lg-2"><h1>How to make your houseplant happy</h1><img src="images/blog1.jpg" alt="Happy Houseplant" class="img-fluid my-4 rounded"><p><b> <p><b>Houseplants are perfect to liven up the rooms of your home - the trouble is, they sometimes turn yellow or wilt, and you have no idea why. Follow the easy steps in this project and you’ll give your houseplants the best chance to stay green and healthy.
+
+                </b></p><p>A healthy houseplant has the right combination of light, soil, and moisture. In other words, it lives in a place that’s just like home. A good tip is to make your plants comfortable by imitating their native environments. It’s worth researching where your houseplants come from and what makes them thrive.
+                </p>
+
+
+<ul><b>Ingredients</b>
+    <li>House Plant compost</li>
+    <li>Ready to use plant food</li>
+    </ul>
+    <ul><b>Other useful items</b>
+        <li>Trowel</li>
+        <li>Moss, mulch or pebbles</li>
+        <li>Watering can</li>
+
+        </ul>
+
+        <h5>STEP-1</h5>
+        <p>Follow your plants’ changing watering needs. Plants vary their water needs over the seasons. When they’re actively growing, they need more water. Watch what your plant is doing and increase or decrease its water accordingly.</p>
+
+
+        <h5>STEP-2</h5>
+        <p>For proper watering, think of your plant as a sponge. There’s no need to let your plant completely dry out before you flood it - that can be stressful. If you think of your plant as a sponge, you want to keep it moist enough to be able to get a drop or two of water with a gentle squeeze.</p>
+
+
+        <h5>STEP-3</h5>
+        <p>Maintain moisture in your plant soil. Place a little moss, mulch, or even some pebbles around the base of your plants to retain moisture in the container. If your schedule is a little hectic, and watering becomes an issue, try using a moisture-retention soil.</p>
+
+
+        <h5>STEP-4</h5>
+        <p>Need for feed. Feeding will produce bigger, lusher plants with more blooms. Ready to use plant food comes in ready to use convenience so there’s no mixing, measuring or mistakes!</p>
+
+
+        <h5>STEP-5</h5>
+        <p>Keep clear of bugs. As with all plants, houseplants can be attacked by a range of bugs. Use the latest insecticide in plant care, which works by hitting existing pests and protecting against new attack to create stronger-resistant plants.</p>
+</b></p><a href="#blog" class="btn btn-custom mt-4">← Back to All Blogs</a></div></div></div></div>
+        <div id="blog-post-2" class="page-content"><div class="container my-5"><div class="col-lg-8 offset-lg-2"><h1>Low maintenance houseplants</h1><img src="images/blog2.jpg" alt="Low maintenance plants" class="img-fluid my-4 rounded"><p><b> <p><b><h5>SPRUCE UP YOUR HOME WITH LOW MAINTENANCE HOUSEPLANTS</h5>
+                </b></p><p><b><h6>Houseplants are a brilliant way to brighten up your home and they bring us lots of benefits – but what if you’re a novice or away a lot? How do you keep those plants happy and healthy? Well, here’s our list of easy-to-care-for plants are low maintenance but still bring a bit of beauty and nature to your home.
+                </b></h6></p>
+
+
+<h6><b>1. ZZ plant - Zamioculcas zamifolia</b></h6>
+<p>The ZZ plant is known as being ‘virtually un-killable’ and is a super plant for those beginning their houseplant journey. It thrives in low light so is great for a shadier corner of the home with its dark, glossy green leaves helping to add a pop of colour. The only light this plant won’t tolerate is bright direct sunshine. The ZZ plant will survive on minimal water and you must always allow the compost to dry out between waterings (which should be once a fortnight during spring and summer). Feed it once a month and you will have a lovely, healthy growing plant with minimal fuss.</p>
+
+
+
+<h6><b>2. Snake plant – Sanseveria trifasciata</b></h6>
+<p>This almost indestructible, structural and striking plant is another must-have for the beginner or someone who travels frequently. The snake plant will survive in a shady spot but will really thrive in a sunny location so is perfect for a south-facing windowsill. To keep this plant looking its best, don’t overwater. The snake plant is a succulent which means it can store water in its leaves so always check the compost is completely dry before watering. Make sure it is in very free-draining compost and never allow the roots to sit in water.</p>
+
+
+
+<h6><b>3. Aloe vera</b></h6>
+<p>Like the snake plant, Aloe vera enjoys a sunnier location and is also a succulent so will only need watering when the top level of the compost has dried out. Make sure the roots never sit in water and that it’s planted in a free draining compost such as one for cacti and succulents. A great bonus to Aloe vera is that it has a gel inside it that can be used to treat many skin conditions including sunburn, burns, skin irritations and insect bites. Simply cut off a leaf, split it lengthways and apply the gel directly to the skin.</p>
+
+
+
+<h6><b>4. Jade plant – Crassula ovata</b></h6>
+<p>Also known as the money plant, this long-living succulent is supposed to bring money and prosperity to the household. The Jade plant can be bought as a small succulent or as a much larger plant that looks like a mini tree. If you frequently forget to water your plants, then this is the one for you as it prefers to be under watered. The best location for the Jade plant is somewhere with bright but indirect light but in the winter let it have a few hours of direct sun to help minimise leaf drop.</p>
+
+
+
+
+<h6><b>5. Peace lily – Spathiphyllum wallisii</b></h6>
+<p>Another fairly easy houseplant to look after with the added bonus of producing pure white flower-like spathes. This plant likes humidity, lower light levels and moist soil so is the perfect partner for the bathroom or a darker kitchen. Although the peace lily requires more watering than the others it will always tell you when it needs a water as the glossy green leaves start to droop. Keep it watered weekly and feed once a month during the spring/summer.</p>
+</b></p><a href="#blog" class="btn btn-custom mt-4">← Back to All Blogs</a></div></div></div>
+        <div id="blog-post-3" class="page-content"><div class="container my-5"><div class="col-lg-8 offset-lg-2"><h1>How to Get Rid of Woolly Aphids</h1><img src="images/blog3.jpg" alt="Woolly Aphids" class="img-fluid my-4 rounded"><p><b><p><b><h5>The appearance of white cottony fluff on a plant can be a worrying sight. Eriosomatinae, to use their scientific name, are a troublesome sap-sucking insect that are often mistaken for other pests and diseases.</h5>
+             <br>
+             <br>   
+
+<h3>Woolly aphids control and treatment</h3>
+<br>
+
+<p>The best option for woolly aphids treatment is usally non-chemical control, as the white coating that they produce protects them from the effects of many of the typical biological and chemical treatments that we might use.</p>
+<p>Remove woolly aphids, honeydew and sooty mould by hand, squashing the aphids as you go. A strong spray of water combined with a scrub from a stiff brush is an organic and wildlife friendly way to remove them and their symptoms.</p>
+<p>Woolly aphids in small numbers should be tolerated as far as possible. However, keep an eye on the infestation as they can soon get out of control, and although they will not kill your tree, they can cause other disease that will harm your tree. Woolly aphids are not harmful to humans, and insecticides are likely to harm beneficial insects which we need to predate the woolly aphids. However, if populations are intolerable, use BugClear™ Fruit & Veg Ultra weekly until under control.</p>
+<p>As woolly aphids often focus their attack on large shrubs and trees, it is difficult to apply non-organic treatment, as the whole plant needs to be treated. Of course, as flying insects they can also freely fly from plant to plant, laying eggs at their new location. For woolly aphids, prevention is far easier than cure.</p>
+<p>Woolly aphids are vectors for other pests and diseases, in particular powdery mildew. They spread diseases and fungi, so if you are treating another pest or disease, check that the original  culprit isn’t woolly aphid.</p>
+<br><br>
+<h3>How to prevent woolly aphids</h3><br>
+<p>​If the affected plant is in a container, isolate it, as woolly aphids will happily spread to another host plant to continue their work.</p>
+<p>Encourage earwigs, hoverflies, lacewings and ladybirds to the garden, which will eat woolly aphids. Special habitats can be made and bought, and you can also plant flowers which produce lots of nectar to bring them in to the garden too.</p>
+<p>Keep plants as healthy as possible, feeding them to give them continuous access to the right nutrients. Try 2 in 1 Nourish & Protect Rose, Shrubs & Ornamental Ready to Use Plant Food, and ensure appropriate levels of moisture. Remove parts of the plant which have been coated in honeydew or sooty mould, to maximise the amount of sunlight that can reach the plant, improving its ability to grow well despite any attacks by woolly or other aphids.</p>
+   
+</b></p><a href="#blog" class="btn btn-custom mt-4">← Back to All Blogs</a></div></div></div>
+    </main>
+    <div class="cart-overlay"></div><div class="cart"><div class="cart-header"><i class="fa-solid fa-arrow-right cart-close"></i><h2>Your Cart</h2></div><div class="cart-body"></div><div class="cart-footer"><div><strong>Total</strong><span class="cart-total">Tk.0</span></div><button class="cart-clear">Clear Cart</button><button class="checkout">Checkout</button></div></div>
+    <div class="container" id="offer"><div class="row py-5"><div class="col-md-4 text-center"><i class="fa-solid fa-cart-shopping"></i><h5>Free Shipping</h5><p>On order over Tk.1000</p></div><div class="col-md-4 text-center"><i class="fa-solid fa-truck"></i><h5>Fast Delivery</h5><p>Teknaf to Tetulia</p></div><div class="col-md-4 text-center"><i class="fa-solid fa-thumbs-up"></i><h5>Big Choice</h5><p>Of product</p></div></div></div>
+    <footer id="footer"><div class="footer-top"><div class="container"><div class="row"><div class="col-lg-3 col-md-6 footer-content"><h3>Gach_pala</h3><p>Plant trees, save the environment.</p><strong><i class="fas fa-phone"></i> Phone: <strong>+8801987654320</strong></strong><br><strong><i class="fa-solid fa-envelope"></i> Email: <strong>gach_pala@gmail.com</strong></strong></div><div class="col-lg-3 col-md-6 footer-links"><h4>Useful Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#blog">Blogs</a></li></ul></div><div class="col-lg-3 col-md-6 footer-links"><h4>Our Services</h4><ul><li><a href="#indoor">Indoor plants</a></li><li><a href="#outdoor">Outdoor plants</a></li><li><a href="#tools">Garden tools</a></li></ul></div><div class="col-lg-3 col-md-6 footer-links"><h4>Our Social Network</h4><div class="socail-links mt-3"><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div></div></div></div></div><hr><div class="container py-4"><div class="copyright">© Copyright <strong>Gach_pala</strong>.All Rights Reserved</div><div class="credits">Designed By <a href="#">Anannya</a></div></div></footer>
+    <a href="#" class="arrow"><i><img src="image/up-arrow.png" alt="" width="50px"></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
